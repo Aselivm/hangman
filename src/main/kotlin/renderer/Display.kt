@@ -57,7 +57,9 @@ object Display {
     }
 
     fun showGuessedLetters(guessedLetters: String) {
-        println("Guessed letters: $guessedLetters")
+        if(guessedLetters.isNotBlank()){
+            println("Введенные ранее буквы: $guessedLetters")
+        }
     }
 
     fun showHangmanDrawing(attemptsLeft: Int) {
