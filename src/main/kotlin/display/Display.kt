@@ -27,12 +27,9 @@ object Display {
         println("Ошибка ввода. Пожалуйста, введите корректную русскую букву.")
     }
 
-    fun showCorrectGuess(letter: Char) {
-        println("Правильный ввод: буква '$letter' присутствует в слове!")
-    }
-
-    fun showIncorrectGuess(letter: Char) {
-        println("Неправильный ввод: буква '$letter' отсутствует в слове.")
+    fun showGuess(letter: Char, isCorrect: Boolean) {
+        if(isCorrect) println("Правильный ввод: буква '$letter' присутствует в слове!")
+        else println("Неправильный ввод: буква '$letter' отсутствует в слове.")
     }
 
     fun showGameOver(isWin: Boolean, word: String) {

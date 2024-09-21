@@ -21,11 +21,8 @@ class GameProcess {
             Display.showGuessedLetters(currentGame.guessedLetters)
 
             val letter = InputManager.chooseLetter()
-            if (currentGame.guess(letter)) {
-                Display.showCorrectGuess(letter)
-            } else {
-                Display.showIncorrectGuess(letter)
-            }
+            val isCorrect = currentGame.guess(letter)
+            Display.showGuess(letter, isCorrect)
         }
 
         Display.showGameOver(currentGame.isWin(), currentGame.word)
