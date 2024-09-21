@@ -4,7 +4,7 @@ import input.InputManager
 import display.Display
 
 class GameProcess {
-    fun start() {
+    fun startGameLoop() {
         do {
             val difficulty = InputManager.chooseDifficulty()
             play(GameBuilder.createGame(difficulty))

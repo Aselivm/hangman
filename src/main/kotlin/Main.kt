@@ -1,3 +1,3 @@
 fun main() {
-    GameProcess().start()
+    GameProcess().startGameLoop()
 }
