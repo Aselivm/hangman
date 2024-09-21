@@ -38,4 +38,5 @@ compileTestKotlin.kotlinOptions {
 }
 tasks.named<JavaExec>("run") {
     standardInput = System.`in`
+    systemProperty("file.encoding", "UTF-8")
 }
