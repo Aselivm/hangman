@@ -18,7 +18,7 @@ class GameProcess {
             showCurrentState(game)
             processTurnAndShowGuessResult(game)
         }
-        showGameOver(game)
+        showGameOverMessages(game)
     }
 
     private fun showHelloMessages(game: Game) {
@@ -38,7 +38,7 @@ class GameProcess {
         Display.showGuessResult(letter, isCorrect)
     }
 
-    private fun showGameOver(game: Game) {
+    private fun showGameOverMessages(game: Game) {
         Display.showGameOver(game.isWin(), game.word)
     }
 }
