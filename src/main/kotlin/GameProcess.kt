@@ -19,19 +19,15 @@ class GameProcess {
             Display.showHangmanDrawing(currentGame.remainingAttempts)
             Display.showMaskedWord(currentGame.maskedWord)
             Display.showGuessedLetters(currentGame.guessedLetters)
-            processTurn(currentGame)
+
+            val letter = InputManager.chooseLetter()
+            if (currentGame.guess(letter)) {
+                Display.showCorrectGuess(letter)
+            } else {
+                Display.showIncorrectGuess(letter)
+            }
         }
 
         Display.showGameOver(currentGame.isWin(), currentGame.word)
-    }
-
-    private fun processTurn(currentGame: Game) {
-        val letter = InputManager.chooseLetter()
-
-        if (currentGame.guess(letter)) {
-            Display.showCorrectGuess(letter)
-        } else {
-            Display.showIncorrectGuess(letter)
-        }
     }
 }
