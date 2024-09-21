@@ -36,3 +36,6 @@ val compileTestKotlin: KotlinCompile by tasks
 compileTestKotlin.kotlinOptions {
     jvmTarget = "17"
 }
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+}
