@@ -1,4 +1,4 @@
-package renderer
+package display
 
 import game.Difficulty
 

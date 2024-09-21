@@ -1,4 +1,4 @@
-package renderer
+package display
 
 object HangmanDrawings {
     const val HANGMAN_STAGE_6 = """

@@ -1,7 +1,7 @@
 import game.Game
 import game.GameBuilder
-import manager.InputManager
-import renderer.Display
+import input.InputManager
+import display.Display
 
 class GameProcess {
     fun start() {

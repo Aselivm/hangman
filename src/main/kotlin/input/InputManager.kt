@@ -1,7 +1,7 @@
-package manager
+package input
 
 import game.Difficulty
-import renderer.Display
+import display.Display
 
 object InputManager {
 
