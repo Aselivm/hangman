@@ -12,13 +12,13 @@ class GameProcess {
         Display.showThankYouMessage()
     }
 
-    private fun play(currentGame: Game) {
-        showHelloMessages(currentGame)
-        while (!currentGame.isGameOver()) {
-            showCurrentState(currentGame)
-            processTurnAndShowGuessResult(currentGame)
+    private fun play(game: Game) {
+        showHelloMessages(game)
+        while (!game.isGameOver()) {
+            showCurrentState(game)
+            processTurnAndShowGuessResult(game)
         }
-        showGameOver(currentGame)
+        showGameOver(game)
     }
 
     private fun showHelloMessages(currentGame: Game) {
@@ -26,19 +26,19 @@ class GameProcess {
         Display.showCurrentDifficulty(currentGame.difficulty)
     }
 
-    private fun showCurrentState(currentGame: Game) {
-        Display.showHangmanDrawing(currentGame.remainingAttempts)
-        Display.showMaskedWord(currentGame.maskedWord)
-        Display.showGuessedLetters(currentGame.guessedLetters)
+    private fun showCurrentState(game: Game) {
+        Display.showHangmanDrawing(game.remainingAttempts)
+        Display.showMaskedWord(game.maskedWord)
+        Display.showGuessedLetters(game.guessedLetters)
     }
 
-    private fun processTurnAndShowGuessResult(currentGame: Game) {
+    private fun processTurnAndShowGuessResult(game: Game) {
         val letter = InputManager.chooseLetter()
-        val isCorrect = currentGame.guess(letter)
+        val isCorrect = game.guess(letter)
         Display.showGuessResult(letter, isCorrect)
     }
 
-    private fun showGameOver(currentGame: Game) {
-        Display.showGameOver(currentGame.isWin(), currentGame.word)
+    private fun showGameOver(game: Game) {
+        Display.showGameOver(game.isWin(), game.word)
     }
 }
