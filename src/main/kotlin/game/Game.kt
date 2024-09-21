@@ -6,7 +6,7 @@ class Game(val word: String, var remainingAttempts: Int, val difficulty: Difficu
     private var guessedLettersArray: MutableList<Char>
 
     val maskedWord: String
-        get() = maskedWordArray.joinToString(", ")
+        get() = maskedWordArray.joinToString(" ")
 
     val guessedLetters: String
         get() = guessedLettersArray.joinToString(", ")
