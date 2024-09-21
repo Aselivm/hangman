@@ -21,9 +21,9 @@ class GameProcess {
         showGameOver(game)
     }
 
-    private fun showHelloMessages(currentGame: Game) {
+    private fun showHelloMessages(game: Game) {
         Display.showWelcomeMessage()
-        Display.showCurrentDifficulty(currentGame.difficulty)
+        Display.showCurrentDifficulty(game.difficulty)
     }
 
     private fun showCurrentState(game: Game) {
