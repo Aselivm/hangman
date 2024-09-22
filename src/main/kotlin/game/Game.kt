@@ -45,7 +45,7 @@ class Game(val word: String, var remainingAttempts: Int, val difficulty: Difficu
         return maskedWordArray.joinToString("") == word
     }
 
-    private fun hideWord(word: String) : CharArray {
+    private fun hideWord(word: String): CharArray {
         return word.map { '_' }.toCharArray()
     }
 }

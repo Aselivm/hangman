@@ -28,7 +28,7 @@ object Display {
     }
 
     fun showGuessResult(letter: Char, isCorrect: Boolean) {
-        if(isCorrect) println("Правильный ввод: буква '$letter' присутствует в слове!")
+        if (isCorrect) println("Правильный ввод: буква '$letter' присутствует в слове!")
         else println("Неправильный ввод: буква '$letter' отсутствует в слове.")
     }
 
@@ -54,7 +54,7 @@ object Display {
     }
 
     fun showGuessedLetters(guessedLetters: String) {
-        if(guessedLetters.isNotBlank()){
+        if (guessedLetters.isNotBlank()) {
             println("Введенные ранее буквы: $guessedLetters")
         }
     }
