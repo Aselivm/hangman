@@ -8,7 +8,7 @@ object InputManager {
     fun chooseDifficulty(): Difficulty {
         Display.showDifficultyOptions()
         while (true) {
-            val difficulty = when (readlnOrNull()?.trim()?.lowercase()) {
+            val difficulty = when (input()) {
                 "1" -> Difficulty.EASY
                 "2" -> Difficulty.MEDIUM
                 "3" -> Difficulty.HARD
@@ -25,9 +25,9 @@ object InputManager {
     fun chooseLetter(): Char {
         Display.showLetterPrompt()
         while (true) {
-            val input = readlnOrNull()?.trim()?.lowercase()
-            if (input != null && input.length == 1 && isRussianLetter(input[0])) {
-                return input[0]
+            val inputGuess = input()
+            if (inputGuess != null && inputGuess.length == 1 && isRussianLetter(inputGuess[0])) {
+                return inputGuess[0]
             } else {
                 Display.showInvalidLetterInput()
             }
@@ -37,8 +37,7 @@ object InputManager {
     fun playAgain(): Boolean {
         while (true) {
             Display.showPlayAgainPrompt()
-
-            when (readlnOrNull()?.trim()?.lowercase()) {
+            when (input()) {
                 "да" -> return true
                 "нет" -> return false
                 else -> {
@@ -46,6 +45,10 @@ object InputManager {
                 }
             }
         }
+    }
+
+    private fun input(): String? {
+        return readlnOrNull()?.trim()?.lowercase()
     }
 
     private fun isRussianLetter(char: Char): Boolean {
