@@ -26,3 +26,10 @@
 1. Guess the letters of the hidden word.
 2. Enter a letter when prompted.
 3. Continue until you either guess the word or run out of attempts.
+
+### Настройка кодировки для корректного отображения русского текста:
+Для пользователей Windows PowerShell:
+```powershell
+# Установите кодировку UTF-8 для корректного вывода символов
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
