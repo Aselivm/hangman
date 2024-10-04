@@ -30,6 +30,5 @@
 ### Настройка кодировки для корректного отображения русского текста:
 Для пользователей Windows PowerShell:
 ```powershell
-# Установите кодировку UTF-8 для корректного вывода символов
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
